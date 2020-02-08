@@ -12,6 +12,7 @@ Last update : 08/02/20 (DrLarck)
 
 # dependancies
 import asyncio
+import discord
 from discord.ext import commands
 
 # conf
@@ -36,8 +37,12 @@ class Main():
         Return : `None`
         """
 
+        # init
+        activity = discord.Game(name = f"--help | v{Config_bot.version} - {Config_bot.phase}")
+
         client = commands.Bot(
-            command_prefix = Config_bot.prefix, help_command = None
+            command_prefix = Config_bot.prefix, help_command = None,
+            activity = activity
         )
 
         # run

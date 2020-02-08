@@ -23,6 +23,10 @@ class Config_bot():
     # prefixes
     prefix = ["--", "**"]
 
+    # version
+    version = "1.0"
+    phase = "ALPHA"
+
     # bot token
     # hidden
     token = os.environ["guibot_token"]
